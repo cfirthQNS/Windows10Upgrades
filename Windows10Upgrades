@@ -185,7 +185,7 @@ while ($n-1 -lt ($computer_list.Name).Count ) {
 
 while ((Get-job).state -match "Running"){
     clear
-    Get-Job
+    Get-Job | FT Name, ID, PSBeginTime, PSEndTime, State
     start-sleep 5
 }
 
